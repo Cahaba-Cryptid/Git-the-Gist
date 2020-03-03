@@ -1,4 +1,8 @@
-{{#each this.gistsInfo.gists as |gist|}}
+<button {{action 'snap'}}>
+  {{if this.snapped 'unsnap' 'snap'}}
+</button>
+
+{{#animated-each this.shownGists as |gist|}}
   <hr>
   <div class="file-block">
     <div class="file-header">
@@ -11,4 +15,4 @@
       {{gist.body}}
     </CodeBlock>
   </div>
-{{/each}}
+{{/animated-each}}
